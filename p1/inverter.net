@@ -1,0 +1,17 @@
+* E:\Descargas\ic_digital\tarea05\p1\inverter.asc
+M2 nQ Q Vdd Vdd P_2u l={M2_L} w={M2_L*M2_WL}
+M1 nQ Q Vss Vss N_2u l={M1_L} w={M1_L*M1_WL}
+Vdd Vdd 0 5
+Vss Vss 0 0
+VQ Q 0
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\akiles\AppData\Local\LTspice\lib\cmp\standard.mos
+.include "../2um_CMOS.modlib"
+.param M1_L=2u M1_WL=3
+.param M2_L=2u
+.save V(nQ)
+.step PARAM M2_WL LIST 1 3 6 9 12 15 18 21 24
+.dc VQ 0 5 0.01
+.backanno
+.end

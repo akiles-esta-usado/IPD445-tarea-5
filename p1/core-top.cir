@@ -1,0 +1,41 @@
+* SRAM Core Top
+
+.include "core-parametrized.cir"
+
+.param M1_L 2u
+.param M2_L 2u
+.param M3_L 2u
+.param M4_L 2u
+.param M5_L 2u
+.param M6_L 2u
+
+* Voltages
+* Volt  n+   p+  PULSE(V1  V2  Tdelay  Trise  Tfall  Ton  Tperiod  Ncycles)
+V1      Vdd  0   5
+V2      WL   0   0
+V3      nBL  0   0
+V4      BL   0   0
+V5      Vss  0   0
+
+***********************************
+* Analysis 1: Finding propagation period
+*				PULSE(V1	V2	Tdelay	Trise	Tfall	Ton		Tperiod	Ncycles)
+
+.param M1_WL 1
+.param M2_WL 1
+.param M3_WL 1
+.param M4_WL 1
+.param M5_WL 1
+.param M6_WL 1
+
+.ic V(Q)=5
+*.save V(nQ) V(Q)
+*.step PARAM TON LIST 1.1n 1.2n 1.3n
+*.param TON 1.25n
+.param TON 1.55n
+.tran 50n
+
+.save V(Q) V(nQ) V(BL) V(nBL) V(WL)
+
+.backanno
+.end

@@ -1,5 +1,8 @@
 # Parte 1: Diseño del núcleo de la memoria SRAM
 
+## Diseño del esquemático
+
+Ante la duda de donde conectar el bulk de los transistores M5 y M6, los conecté al Source, y source está conectado al pin del bit.
 
 ## Verificar que La escritura sea correcta
 

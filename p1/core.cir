@@ -1,0 +1,13 @@
+* SRAM Core
+
+* Library
+.include "../2um_CMOS.modlib"
+
+* MOS  D     G    S     B    MODEL  L         W
+M1     nQ    Q    Vss   Vss  N_2u   l={M1_L}  w={M1_L * M1_WL}
+M2     nQ    Q    Vdd   Vdd  P_2u   l={M2_L}  w={M2_L * M2_WL}
+M3     Q     nQ   Vss   Vss  N_2u   l={M3_L}  w={M3_L * M3_WL}
+M4     Q     nQ   Vdd   Vdd  P_2u   l={M4_L}  w={M4_L * M4_WL}
+M5     nQ    WL   nBL   nBL  N_2u   l={M5_L}  w={M5_L * M5_WL}
+M6     Q     WL   BL    BL   N_2u   l={M6_L}  w={M6_L * M6_WL}
+
