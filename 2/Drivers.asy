@@ -1,0 +1,25 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -128 -88 128 88
+WINDOW 0 0 -88 Bottom 2
+PIN -128 -64 LEFT 8
+PINATTR PinName DataIn
+PINATTR SpiceOrder 1
+PIN -128 -32 LEFT 8
+PINATTR PinName phi_d
+PINATTR SpiceOrder 2
+PIN -128 0 LEFT 8
+PINATTR PinName Vdd
+PINATTR SpiceOrder 3
+PIN -128 32 LEFT 8
+PINATTR PinName VddHalf
+PINATTR SpiceOrder 4
+PIN -128 64 LEFT 8
+PINATTR PinName Write
+PINATTR SpiceOrder 5
+PIN 128 -16 RIGHT 8
+PINATTR PinName Data
+PINATTR SpiceOrder 6
+PIN 128 16 RIGHT 8
+PINATTR PinName DataBar
+PINATTR SpiceOrder 7

@@ -1,0 +1,22 @@
+* C:\Users\DANIEL\Documents\IPD445\Tarea5\2\Drivers.asc
+M1 N001 DataIn 0 0 N_2u l=2u w={W_n}
+M2 N002 N001 0 0 N_2u l=2u w={W_n}
+M3 Vdd DataIn N001 Vdd P_2u l=2u w={W_p}
+M4 Vdd N001 N002 Vdd P_2u l=2u w={W_p}
+M5 N002 Write Data 0 N_2u l=2u w={W_D}
+M7 DataBar phi_d Data 0 N_2u l=2u w={W_triple}
+M8 Data phi_d VddHalf 0 N_2u l=2u w={W_triple}
+M9 VddHalf phi_d DataBar 0 N_2u l=2u w={W_triple}
+M6 DataBar Write N001 0 N_2u l=2u w={W_D}
+C1 Data 0 50p
+C4 DataBar 0 50p
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\DANIEL\AppData\Local\LTspice\lib\cmp\standard.mos
+.include "C:\Users\DANIEL\Documents\IPD445\Modelos de transistores-20230616\2um_CMOS.modlib"
+.param W_p=12u
+.param W_n=8u
+.param W_D=8u
+.param W_triple=8u
+.backanno
+.end
