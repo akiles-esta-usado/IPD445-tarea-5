@@ -1,0 +1,131 @@
+* C:\Users\DANIEL\Documents\IPD445\Tarea5\4\completo.asc
+XX1 BL1 nBL1 Vdd 0 WL1 NC_01 NC_02 core-final
+XX2 BL2 nBL2 Vdd 0 WL1 NC_03 NC_04 core-final
+XX3 BL3 nBL3 Vdd 0 WL1 NC_05 NC_06 core-final
+XX4 BL4 nBL4 Vdd 0 WL1 NC_07 NC_08 core-final
+XX5 BL1 nBL1 Vdd 0 WL2 NC_09 NC_10 core-final
+XX6 BL2 nBL2 Vdd 0 WL2 NC_11 NC_12 core-final
+XX7 BL3 nBL3 Vdd 0 WL2 NC_13 NC_14 core-final
+XX8 BL4 nBL4 Vdd 0 WL2 NC_15 NC_16 core-final
+XX9 BL1 nBL1 Vdd 0 WL3 NC_17 NC_18 core-final
+XX10 BL2 nBL2 Vdd 0 WL3 NC_19 NC_20 core-final
+XX11 BL3 nBL3 Vdd 0 WL3 NC_21 NC_22 core-final
+XX12 BL4 nBL4 Vdd 0 WL3 NC_23 NC_24 core-final
+XX13 BL1 nBL1 Vdd 0 WL4 NC_25 NC_26 core-final
+XX14 BL2 nBL2 Vdd 0 WL4 NC_27 NC_28 core-final
+XX15 BL3 nBL3 Vdd 0 WL4 NC_29 NC_30 core-final
+XX16 BL4 nBL4 Vdd 0 WL4 NC_31 NC_32 core-final
+XX17 BL1 nBL1 Vdd 0 WL5 NC_33 NC_34 core-final
+XX18 BL2 nBL2 Vdd 0 WL5 NC_35 NC_36 core-final
+XX19 BL3 nBL3 Vdd 0 WL5 NC_37 NC_38 core-final
+XX20 BL4 nBL4 Vdd 0 WL5 NC_39 NC_40 core-final
+XX21 DataIn phi_d Vdd Vdd/2 Write BL1 nBL1 drivers
+XX22 DataIn phi_d Vdd Vdd/2 Write BL2 nBL2 drivers
+XX23 DataIn phi_d Vdd Vdd/2 Write BL3 nBL3 drivers
+XX24 DataIn phi_d Vdd Vdd/2 Write BL4 nBL4 drivers
+XX25 phi_s phi_s_bar Vdd BL1 nBL1 amp
+XX26 phi_s phi_s_bar Vdd BL2 nBL2 amp
+XX27 phi_s phi_s_bar Vdd BL3 nBL3 amp
+XX28 phi_s phi_s_bar Vdd BL4 nBL4 amp
+M1 A0_Bar A0 0 0 N_2u l=2u w=8u
+M2 Vdd A0 A0_Bar Vdd P_2u l=2u w=12u
+M3 A1_Bar A1 0 0 N_2u l=2u w=8u
+M4 Vdd A1 A1_Bar Vdd P_2u l=2u w=12u
+V§A1 A1 0 0
+V§A2 A2 0 0
+M5 A2_Bar A2 0 0 N_2u l=2u w=8u
+M6 Vdd A2 A2_Bar Vdd P_2u l=2u w=12u
+M8 N015 A0_Bar N013 0 N_2u l=2u w=8u
+M7 N014 A1_Bar N015 0 N_2u l=2u w=8u
+M9 N012 A0 N010 0 N_2u l=2u w=8u
+M10 N011 A1_Bar N012 0 N_2u l=2u w=8u
+M11 0 A2_Bar N014 0 N_2u l=2u w=8u
+M12 0 A2_Bar N011 0 N_2u l=2u w=8u
+M13 N009 A0_Bar N007 0 N_2u l=2u w=8u
+M14 N008 A1 N009 0 N_2u l=2u w=8u
+M15 N006 A0 N004 0 N_2u l=2u w=8u
+M16 N005 A1 N006 0 N_2u l=2u w=8u
+M17 0 A2_Bar N008 0 N_2u l=2u w=8u
+M18 0 A2_Bar N005 0 N_2u l=2u w=8u
+M19 N003 A0_Bar N001 0 N_2u l=2u w=8u
+M20 N002 A1_Bar N003 0 N_2u l=2u w=8u
+M21 0 A2 N002 0 N_2u l=2u w=8u
+M22 N013 phi Vdd Vdd P_2u l=2u w=12u
+M23 N010 phi Vdd Vdd P_2u l=2u w=12u
+M24 N007 phi Vdd Vdd P_2u l=2u w=12u
+M25 N004 phi Vdd Vdd P_2u l=2u w=8u
+M26 N001 phi Vdd Vdd P_2u l=2u w=12u
+V1 Vdd 0 5
+V2 Vdd/2 0 2.5
+V3 phi 0 5
+V7 phi_d 0 PULSE(0 5 180m 1p 1p 40m 80m 1)
+V8 phi_s 0 PULSE(0 5 270m 1p 1p 80m 160m 1)
+M27 phi_s_bar phi_s 0 0 N_2u l=2u w=8u
+M28 Vdd phi_s phi_s_bar Vdd P_2u l=2u w=12u
+V4 Write 0 PULSE(0 5 0 1p 1p 40m 90m 2)
+V5 DataIn 0 PULSE(0 5 0 1p 1p 80m 160m 1)
+M29 WL5 N001 0 0 N_2u l=2u w=8u
+M30 Vdd N001 WL5 Vdd P_2u l=2u w=12u
+M31 WL4 N004 0 0 N_2u l=2u w=8u
+M32 Vdd N004 WL4 Vdd P_2u l=2u w=12u
+M33 WL3 N007 0 0 N_2u l=2u w=8u
+M34 Vdd N007 WL3 Vdd P_2u l=2u w=12u
+M35 WL2 N010 0 0 N_2u l=2u w=8u
+M36 Vdd N010 WL2 Vdd P_2u l=2u w=12u
+M37 WL1 N013 0 0 N_2u l=2u w=8u
+M38 Vdd N013 WL1 Vdd P_2u l=2u w=12u
+V6 A0 0 PULSE(0 5 45m 1p 1p 40m 90m 3)
+
+* block symbol definitions
+.subckt core-final BL nBL Vdd Vss WL nQ Q
+M2 nQ Q Vdd Vdd P_2u l={M2_L} w={M2_L * M2_WL}
+M1 nQ Q Vss Vss N_2u l={M1_L} w={M1_L * M1_WL}
+M4 Q nQ Vdd Vdd P_2u l={M2_L} w={M2_L * M2_WL}
+M3 Q nQ Vss Vss N_2u l={M1_L} w={M1_L * M1_WL}
+M5 nQ WL nBL 0 N_2u l={M5_L} w={M5_L * M5_WL}
+M6 Q WL BL 0 N_2u l={M5_L} w={M5_L * M5_WL}
+.include "C:\Users\DANIEL\Documents\IPD445\Modelos de transistores-20230616\2um_CMOS.modlib"
+.param M1_L=2u M1_WL=9
+.param M2_L=2u M2_WL=6
+.param M5_L=2u M5_WL=6
+.ends core-final
+
+.subckt drivers DataIn phi_d Vdd VddHalf Write Data DataBar
+M1 N001 DataIn 0 0 N_2u l=2u w={W_n}
+M2 N002 N001 0 0 N_2u l=2u w={W_n}
+M3 Vdd DataIn N001 Vdd P_2u l=2u w={W_p}
+M4 Vdd N001 N002 Vdd P_2u l=2u w={W_p}
+M5 N002 Write Data 0 N_2u l=2u w={W_D}
+M7 DataBar phi_d Data 0 N_2u l=2u w={W_triple}
+M8 Data phi_d VddHalf 0 N_2u l=2u w={W_triple}
+M9 VddHalf phi_d DataBar 0 N_2u l=2u w={W_triple}
+M6 DataBar Write N001 0 N_2u l=2u w={W_D}
+C1 Data 0 50p
+C4 DataBar 0 50p
+.include "C:\Users\DANIEL\Documents\IPD445\Modelos de transistores-20230616\2um_CMOS.modlib"
+.param W_p=12u
+.param W_n=8u
+.param W_D=8u
+.param W_triple=8u
+.ends drivers
+
+.subckt amp phi_s phi_s_bar Vdd Data DataBar
+M1 N002 Data DataBar 0 N_2u l=2u w={WN}
+M2 Data DataBar N002 0 N_2u l=2u w={WN}
+M3 N001 DataBar Data Vdd P_2u l=2u w={WP}
+M4 DataBar Data N001 Vdd P_2u l=2u w={WP}
+M5 Vdd phi_s_bar N001 Vdd P_2u l=2u w={WP}
+M6 N002 phi_s 0 0 N_2u l=2u w={WN}
+C1 DataBar 0 100p
+C2 Data 0 100p
+.param WP=24u
+.param WN=16u
+.ends amp
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\DANIEL\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 0 500m 0 10m startup
+.include "C:\Users\DANIEL\Documents\IPD445\Modelos de transistores-20230616\2um_CMOS.modlib"
+.backanno
+.end

@@ -1,0 +1,16 @@
+* C:\Users\DANIEL\Documents\IPD445\Tarea5\3\amp.asc
+M1 N002 Data DataBar 0 N_2u l=2u w={WN}
+M2 Data DataBar N002 0 N_2u l=2u w={WN}
+M3 N001 DataBar Data Vdd P_2u l=2u w={WP}
+M4 DataBar Data N001 Vdd P_2u l=2u w={WP}
+M5 Vdd phi_s_bar N001 Vdd P_2u l=2u w={WP}
+M6 N002 phi_s 0 0 N_2u l=2u w={WN}
+C1 DataBar 0 10p
+C2 Data 0 10p
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\DANIEL\AppData\Local\LTspice\lib\cmp\standard.mos
+.param WP=24u
+.param WN=16u
+.backanno
+.end
